@@ -11,10 +11,13 @@
 </head>
 
 <body>
-  <news-widget></new-widget>
-  <script src="runtime.js" defer></script>
-  <script src="polyfills.js" defer></script>
-  <script src="main.js" defer></script>
+  <news-widget></news-widget>
+  <script src="runtime-es2015.js" type="module"></script>
+  <script src="runtime-es5.js" nomodule defer></script>
+  <script src="polyfills-es5.js" nomodule defer></script>
+  <script src="polyfills-es2015.js" type="module"></script>
+  <script src="main-es2015.js" type="module"></script>
+  <script src="main-es5.js" nomodule defer></script>
 </body>
 
 </html>
