@@ -1,0 +1,7 @@
+// copy your local cert used for the prototype.
+// this was generated if/when you created the first office addin using 'yo office'
+// you can copy paste or replace the cert from your local machine here for testing purposes
+// WARNING, although the crt need not be guarded like your private key associated with it, it's probably a good idea to not check it into source control.  
+// It's a good habit to get into being careful what you check into source control.
+// you can find the cert being used on your local machine at the following path:
+// C:\Users\<your_first_name>.<your_last_name>\.office-addin-dev-certs\localhost.crt
