@@ -1,30 +1,34 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "defaultProject": "angular-web-component",
+  "cli": {
+    "analytics": false,
+    "defaultCollection": "@nrwl/angular"
+  },
   "projects": {
     "angular-web-component": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
-      "sourceRoot": "src",
+      "root": "apps/angular-web-component",
+      "sourceRoot": "apps/angular-web-component/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-web-component",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/apps/angular-web-component",
+            "index": "apps/angular-web-component/src/index.html",
+            "main": "apps/angular-web-component/src/main.ts",
+            "polyfills": "apps/angular-web-component/src/polyfills.ts",
+            "tsConfig": "apps/angular-web-component/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/angular-web-component/src/favicon.ico",
+              "apps/angular-web-component/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "apps/angular-web-component/src/styles.css"
             ],
             "scripts": []
           },
@@ -32,8 +36,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/angular-web-component/src/environments/environment.ts",
+                  "with": "apps/angular-web-component/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -80,16 +84,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "main": "apps/angular-web-component/src/test.ts",
+            "polyfills": "apps/angular-web-component/src/polyfills.ts",
+            "tsConfig": "apps/angular-web-component/tsconfig.spec.json",
+            "karmaConfig": "apps/angular-web-component/karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/angular-web-component/src/favicon.ico",
+              "apps/angular-web-component/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "apps/angular-web-component/src/styles.css"
             ],
             "scripts": []
           }
@@ -98,9 +102,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "apps/angular-web-component/tsconfig.app.json",
+              "apps/angular-web-component/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -120,10 +123,33 @@
           }
         }
       }
+    },
+    "angular-web-component-e2e": {
+      "root": "apps/angular-web-component-e2e",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/angular-web-component-e2e/protractor.conf.js",
+            "devServerTarget": "angular-web-component:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-web-component:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/angular-web-component-e2e/tsconfig.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
-  },
-  "defaultProject": "angular-web-component",
-  "cli": {
-    "analytics": false
   }
 }

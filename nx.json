@@ -1,0 +1,25 @@
+{
+  "npmScope": "angular-web-component",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
+  },
+  "projects": {
+    "angular-web-component": {
+      "tags": []
+    },
+    "angular-web-component-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "angular-web-component"
+      ]
+    }
+  }
+}
