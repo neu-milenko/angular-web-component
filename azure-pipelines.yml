@@ -34,4 +34,4 @@ steps:
     azureSubscription: 'Visual Studio Professional Subscription(bb41447b-d689-4af1-941f-3d7c9218411b)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az storage copy --recursive -s ./dist/* -d https://verbmailtest.blob.core.windows.net/$web/'
+    inlineScript: 'az storage copy --recursive -s ./dist/angular-web-component/* -d https://verbmailtest.blob.core.windows.net/\$web'
