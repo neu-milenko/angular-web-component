@@ -1,3 +1,8 @@
+# How To Get Angular Outlook Addin Working
+steps:
+    -🔑 Replace localhost.crt and localhost.key with your local versions.  See inside the provided versions for details.
+    -`npm run start`
+
 # AngularWebComponent
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.

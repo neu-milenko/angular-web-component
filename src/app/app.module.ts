@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewsComponent } from './news/news.component';
 
 import { Injector} from '@angular/core';
-import { createCustomElement } from '@angular/elements';
+//import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [
@@ -18,13 +18,10 @@ import { createCustomElement } from '@angular/elements';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent, NewsComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-    const el = createCustomElement(NewsComponent, { injector });
-    customElements.define('news-widget', el);
-  }
 
   ngDoBootstrap(): void {}
+
  }
