@@ -21,17 +21,11 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
-- task: AzureFileCopy@4
-  enabled: false
-  inputs:
-    SourcePath: 'dist/**'
-    azureSubscription: 'Visual Studio Professional Subscription(bb41447b-d689-4af1-941f-3d7c9218411b)'
-    Destination: 'AzureBlob'
-    storage: 'verbmailtest'
-    ContainerName: '$web'
+
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'Visual Studio Professional Subscription(bb41447b-d689-4af1-941f-3d7c9218411b)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: 'az storage blob upload-batch -s dist/angular-web-component -d \$web --account-name verbmailtest'
+  displayName: 'az storage blob upload-batch'
