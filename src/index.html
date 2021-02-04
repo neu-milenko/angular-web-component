@@ -29,7 +29,7 @@
           let h = Math.trunc((532 * 100) / screen.height);
           let w = Math.trunc((1296 * 100) / screen.width);
 
-          Office.context.ui.displayDialogAsync("https://localhost:4200",
+          Office.context.ui.displayDialogAsync("https://verbmailtest.z22.web.core.windows.net",
             { height: h, width: w, displayInIframe: true },
             result => dialogCallback(result, event)
             );
