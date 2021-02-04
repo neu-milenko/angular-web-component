@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewsComponent } from './news/news.component';
 
 import { Injector} from '@angular/core';
-//import { createCustomElement } from '@angular/elements';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [
