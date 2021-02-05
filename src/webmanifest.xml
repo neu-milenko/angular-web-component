@@ -7,10 +7,10 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="angular web component"/>
-  <Description DefaultValue="Get Outlook add-in working using Angular"/>
-  <IconUrl DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/icon-128.png"/>
+  <DisplayName DefaultValue="verbMail"/>
+  <Description DefaultValue="Outlook add-in working using Angular"/>
+  <IconUrl DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-128.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
     <AppDomain>https://verbmailtest.z22.web.core.windows.net</AppDomain>
@@ -73,17 +73,17 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://verbmailtest.z22.web.core.windows.net"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Contoso Add-in"/>
-        <bt:String id="msgWriteGroupLabel" DefaultValue="Angular Video Player"/>
-        <bt:String id="ActionButton.Label" DefaultValue="Open Modal"/>
+        <bt:String id="GroupLabel" DefaultValue="verbMail Add-in"/>
+        <bt:String id="msgWriteGroupLabel" DefaultValue="verbMail Video Player"/>
+        <bt:String id="ActionButton.Label" DefaultValue="Open verbMail"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="ActionButton.Tooltip" DefaultValue="Perform an action when clicked."/>
