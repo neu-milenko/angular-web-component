@@ -1,3 +1,5 @@
+![Build Status](https://dev.azure.com/neu-verb/verbMail/_apis/build/status/milenko-neudesic.angular-web-component?branchName=master)
+
 # How To Get Angular Outlook Addin Working
 steps:
     -🔑 Replace localhost.crt and localhost.key with your local versions.  See inside the provided versions for details.

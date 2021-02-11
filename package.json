@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-web-component": "ng build --prod --output-hashing none"
+    "build-web-component": "ng build --prod",
+    "publish": "az storage blob upload-batch -s dist/angular-web-component -d $web --account-name verbmailtest --subscription bb41447b-d689-4af1-941f-3d7c9218411b"
   },
   "private": true,
   "dependencies": {
