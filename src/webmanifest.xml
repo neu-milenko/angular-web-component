@@ -9,9 +9,9 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="verbMail"/>
   <Description DefaultValue="Outlook add-in working using Angular"/>
-  <IconUrl DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-128.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <IconUrl DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/64x64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/128x128.png"/>
+  <SupportUrl DefaultValue="https://verb.tech"/>
   <AppDomains>
     <AppDomain>https://verbmailtest.z22.web.core.windows.net</AppDomain>
   </AppDomains>
@@ -20,13 +20,13 @@
   </Hosts>
   <Requirements>
     <Sets>
-      <Set Name="Mailbox" MinVersion="1.1"/>
+      <Set Name="Mailbox" MinVersion="1.2"/>
     </Sets>
   </Requirements>
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://verbmailtest.z22.web.core.windows.net/taskpane.html"/>
+        <SourceLocation DefaultValue="https://verbmailtest.z22.web.core.windows.net"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -49,7 +49,7 @@
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="msgWriteGroup">
-                <Label resid="msgWriteGroupLabel"/>
+                <Label resid="GroupLabel"/>
                 <Control xsi:type="Button" id="msgWriteOpenPaneButton">
                   <Label resid="ActionButton.Label"/>
                   <Supertip>
@@ -73,9 +73,9 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/verb-logo-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/16x16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/32x32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://verbmailtest.z22.web.core.windows.net/assets/80x80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://verbmailtest.z22.web.core.windows.net"/>
