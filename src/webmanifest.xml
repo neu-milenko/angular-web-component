@@ -5,7 +5,7 @@
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
   <Id>fe19f7d3-ab76-4feb-85f5-e31c0e38723d</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
+  <ProviderName>verb</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="verbMail"/>
   <Description DefaultValue="Outlook add-in working using Angular"/>

@@ -63,8 +63,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "angular-web-component:build",
-            "sslKey": "localhost.key",
-            "sslCert": "localhost.crt"
+            "sslKey": "../../../../.office-addin-dev-certs/localhost.key",
+            "sslCert": "../../../../.office-addin-dev-certs/localhost.crt"
           },
           "configurations": {
             "production": {

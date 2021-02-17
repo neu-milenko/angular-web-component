@@ -4,11 +4,11 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="verbMail"/>
+  <DisplayName DefaultValue="globMail"/>
   <Description DefaultValue="Outlook add-in working using Angular"/>
   <IconUrl DefaultValue="https://localhost:4200/assets/verb-logo-64.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:4200/assets/verb-logo-128.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://www.globomantics.com/help"/>
   <AppDomains>
     <AppDomain>https://localhost:4200</AppDomain>
   </AppDomains>
