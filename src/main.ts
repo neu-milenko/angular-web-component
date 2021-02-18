@@ -38,7 +38,7 @@ Office.initialize = () => {
     });
   };
 
-  g.openDialog =(event) => {
+  g.openDialog = (event: any) => {
 
     console.log(`opening dialog ${event}`)
 
@@ -50,17 +50,16 @@ Office.initialize = () => {
         (result) => { g.dialogCallback(result, event); }
       );
     };
-
-  console.log(`app bootstrap`);
-
-  platformBrowserDynamic()
-    .bootstrapModule(AppModule)
-    .catch(err => console.error(err));
 };
 
 Office.onReady((info) => {
   console.log(`onReady ${info}`);
   console.dir(info);
+
+  console.log(`app bootstrap`);
+  platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch(err => console.error(err));
 
   window.onclose = () => {
     console.log('onclose');
