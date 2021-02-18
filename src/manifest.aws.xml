@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
-  <Id>32e047d1-c0a3-49b2-b70d-1f390ece7812</Id>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
+  <Id>6651f4d2-57a9-4657-9862-a913f9f99845</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="globMail"/>
+  <DisplayName DefaultValue="awsMail"/>
   <Description DefaultValue="Outlook add-in working using Angular"/>
-  <IconUrl DefaultValue="https://localhost:4200/assets/64x64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:4200/assets/128x128.png"/>
+  <IconUrl DefaultValue="https://verbmaildev.s3.amazonaws.com/assets/64x64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://verbmaildev.s3.amazonaws.com/assets/128x128.png"/>
   <SupportUrl DefaultValue="https://www.globomantics.com/help"/>
   <AppDomains>
-    <AppDomain>https://localhost:4200</AppDomain>
+    <AppDomain>https://verbmaildev.s3.amazonaws.com</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -23,7 +26,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:4200/taskpane.html"/>
+        <SourceLocation DefaultValue="https://verbmaildev.s3.amazonaws.com/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -70,20 +73,20 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:4200/assets/16x16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:4200/assets/32x32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:4200/assets/80x80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://verbmaildev.s3.amazonaws.com/assets/16x16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://verbmaildev.s3.amazonaws.com/assets/32x32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://verbmaildev.s3.amazonaws.com/assets/80x80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:4200"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://verbmaildev.s3.amazonaws.com/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="verbMail Add-in"/>
-        <bt:String id="msgWriteGroupLabel" DefaultValue="verbMail Video Player"/>
-        <bt:String id="ActionButton.Label" DefaultValue="verbMail"/>
+        <bt:String id="GroupLabel" DefaultValue="awsMail Add-in"/>
+        <bt:String id="msgWriteGroupLabel" DefaultValue="awsMail Video Player"/>
+        <bt:String id="ActionButton.Label" DefaultValue="awsMail"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="ActionButton.Tooltip" DefaultValue="Click to open the verbMail player."/>
+        <bt:String id="ActionButton.Tooltip" DefaultValue="Click to open the awsMail player."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

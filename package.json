@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-web-component": "ng build --prod",
-    "publish": "az storage blob upload-batch -s dist/angular-web-component -d $web --account-name verbmailtest"
+    "publish-az": "az storage blob upload-batch -s dist/angular-web-component -d $web --account-name verbmailtest",
+    "publish-aws": "aws s3 rm s3://verbmaildev --recursive && aws s3 cp dist/angular-web-component/ s3://verbmaildev --recursive"
   },
   "private": true,
   "dependencies": {

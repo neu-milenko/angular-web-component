@@ -22,7 +22,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/webmanifest.xml"
+              "src/manifest.aws.xml"
             ],
             "styles": [
               "src/styles.css"

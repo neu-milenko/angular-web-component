@@ -8,45 +8,46 @@ if (environment.production) {
   enableProdMode();
 }
 
-function getGlobal() {
-  return typeof self !== "undefined"
+function getGlobal(): any {
+  return typeof self !== 'undefined'
     ? self
-    : typeof window !== "undefined"
+    : typeof window !== 'undefined'
     ? window
     // : typeof global !== "undefined"
     // ? global
     : undefined;
 }
 
-const g = getGlobal() as any;
+const g = getGlobal();
 
 Office.initialize = () => {
 
-  g.dialogCallback = function dialogCallback(asyncResult : Office.AsyncResult<Office.Dialog>, event: any ) {
-    if (asyncResult.status == Office.AsyncResultStatus.Failed)
+  g.dialogCallback = (asyncResult : Office.AsyncResult<Office.Dialog>, event: any ): void => {
+    if (asyncResult.status === Office.AsyncResultStatus.Failed) {
       return;
+    }
 
-    let dialog = asyncResult.value;
+    const dialog = asyncResult.value;
 
     /*Messages are sent by developers programatically from the dialog using office.context.ui.messageParent(...)*/
-    dialog.addEventHandler(Office.EventType.DialogEventReceived, function(arg) {
+    dialog.addEventHandler(Office.EventType.DialogEventReceived, (arg) => {
       console.log(`closing dialog ${arg}`)
 
-      //dialog.close();
+      // dialog.close();
       event.completed();
     });
   };
 
-  g.openDialog = function openDialog(event) {
+  g.openDialog =(event) => {
 
     console.log(`opening dialog ${event}`)
 
-    let h = Math.trunc((640 * 100) / screen.height);
-    let w = Math.trunc((1296 * 100) / screen.width);
+    const h = Math.trunc((640 * 100) / screen.height);
+    const w = Math.trunc((1296 * 100) / screen.width);
 
     Office.context.ui.displayDialogAsync(environment.ADD_IN_HOST,
       { height: h, width: w, displayInIframe: true },
-      function(result) { g.dialogCallback(result, event) }
+        (result) => { g.dialogCallback(result, event); }
       );
     };
 
@@ -57,11 +58,12 @@ Office.initialize = () => {
     .catch(err => console.error(err));
 };
 
-// Office.onReady((info) => {
-//   console.log(`onReady ${info}`);
+Office.onReady((info) => {
+  console.log(`onReady ${info}`);
+  console.dir(info);
 
-//   window.onclose = () => {
-//     console.log('onclose');
-//     Office.context.ui.messageParent(true);
-//   };
-// });
+  window.onclose = () => {
+    console.log('onclose');
+    Office.context.ui.messageParent(true);
+  };
+});
