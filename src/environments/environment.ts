@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ADD_IN_HOST: 'https://localhost:4200'
+  ADD_IN_HOST: 'https://localhost:4200/index.html'
 };
 
 /*

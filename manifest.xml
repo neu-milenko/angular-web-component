@@ -4,11 +4,11 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="globMail"/>
+  <DisplayName DefaultValue="localMail"/>
   <Description DefaultValue="Outlook add-in working using Angular"/>
   <IconUrl DefaultValue="https://localhost:4200/assets/64x64.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:4200/assets/128x128.png"/>
-  <SupportUrl DefaultValue="https://www.globomantics.com/help"/>
+  <SupportUrl DefaultValue="https://localhost:4200/help"/>
   <AppDomains>
     <AppDomain>https://localhost:4200</AppDomain>
   </AppDomains>
@@ -75,15 +75,15 @@
         <bt:Image id="Icon.80x80" DefaultValue="https://localhost:4200/assets/80x80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:4200"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://localhost:4200/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="verbMail Add-in"/>
-        <bt:String id="msgWriteGroupLabel" DefaultValue="verbMail Video Player"/>
-        <bt:String id="ActionButton.Label" DefaultValue="verbMail"/>
+        <bt:String id="GroupLabel" DefaultValue="localMail Add-in"/>
+        <bt:String id="msgWriteGroupLabel" DefaultValue="localMail Video Player"/>
+        <bt:String id="ActionButton.Label" DefaultValue="localMail"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="ActionButton.Tooltip" DefaultValue="Click to open the verbMail player."/>
+        <bt:String id="ActionButton.Tooltip" DefaultValue="Click to open the localMail player."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
